@@ -1,40 +1,56 @@
-# ((TITLE)) Data Exploration
+# Data Exploration of Ford Go Bike System for 2018 
 
 ## Dataset
 
-The data consists of ((ENTRIES)), including
-17. The dataset can be found in [here](address),
-with feature documentation available [here](address).
+The data consists of 1740396, including
+19 anonymized features
 
+Trip Duration (seconds)
+Start Time and Date
+Start Station ID
+Start Station Name
+Start Station Latitude
+Start Station Longitude
+End Time and Date
+End Station ID
+End Station Name
+End Station Latitude
+End Station Longitude
+Bike ID
+User Type (Subscriber or Customer – “Subscriber” = Member or “Customer” = Casual)
+Member Year of Birth
+Member Gender
+Derived features
+
+User Age
+Start Daytime
+End Daytime
+Start Month
+
+
+Most variables are nominal in nature, but the variables duration and age are numeric variables. The ordinal variable user_type, start_month are ordered with the following levels:
+
+User Type: Customer -> Subscriber
+
+Start/End Daytime: 'morning' ->'afternoon' -> 'evening' -> 'night'
+
+Start Month: 1 -> ... -> 12
 
 ## Summary of Findings
 
-In the exploration, I found that there was a ((strong relationship between )). The relationship is
-approximately linear between ((features)) when ((feature)) is transformed to be on
-a logarithmic scale and transformed to be on a scale)). I found a
-somewhat surprising result initially when the marginal trend for the ((features)) variables indicated that higher quality was associated with
-lower ((feature)). However, higher  quality was also associated with smaller
-((ITEM)). When I isolated ((ITEMS)) of a single ((feature)), there was a clear
-positive relationship between higher  quality and higher ((feature)).
+In the exploration, I found that there was a relationship between age and duration. 
+The distribution for age and duration is strongly right skewed. 
+The distribution of the categorical vars shows that the common user is a male subscriber without sharing the bike for all trip.
+With an average age of 33 the usual custumer is a subscriber.
+In the distribution of duration of rides the most rides are taking less then 64 min. 
 
-Outside of the main variables of interest, I verified the relationship between
- ((feature)) dimensions. For the dataset given,
-there was an interesting interaction in the categorical  quality
-features. The lower ((feature)) grades looked like they had slightly better
-distribution of ((feature)) than ((items)) with the higher ((feature)).
 
 
 ## Key Insights for Presentation
 
-For the presentation, I focus on just the influence of ((feature))
-and leave out most of the intermediate derivations. I start by introducing the
-((feature)) variable, followed by the pattern in ((feature)) distribution, then plot the
-transformed scatterplot.
+For the presentation, I focus on the duration of rides  
+and leave out most of the derivations. I start by introducing the
+distribution of duration (using a histogram) zooming in to the difference by user type (using a violin plot), followed by the distribution of locations.
 
-Afterwards, I introduce each of the categorical variables one by one. To start,
-I use the violin plots of ((feature)) and ((feature)) across ((feature)). I'm only looking at
-the ((feature)) grade plot here since it's the clearest example of how the
-categorical quality grades affect ((feature)). The other two categorical
-variables, ((features)), are covered afterwards, using point plots. I've made
-sure to use different color palettes for each quality variable to make sure it
-is clear that they're different between plots.
+Afterwards, I introduce a FacetedPlot ploting duration vs month in 2018. 
+Inside I use pointplot to point out the average development of the duration during separeted by location.
