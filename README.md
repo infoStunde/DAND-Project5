@@ -1,5 +1,22 @@
 # Data Exploration of Ford Go Bike System for 2018 
 
+## SETUP
+1. Create folder in the project: /data/bike/
+
+2. Download in that bike folder the .zip data from https://stackoverflow.com/questions/20906474/import-multiple-csv-files-into-pandas-and-concatenate-into-one-dataframe
+
+3.  Set in DownloadAndCleanData.ipynb the var to tTrue
+
+> doExtract = True
+> readInFileByFile = True
+
+4. Run the DownloadAndCleanData.ipynb
+
+5. Run exploration.ipynb
+
+6. Run slide_deck.ipynb
+
+
 ## Dataset
 
 The data consists of 1740396, including
