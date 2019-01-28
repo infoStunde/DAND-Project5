@@ -3,7 +3,7 @@
 ## SETUP
 1. Create folder in the project: /data/bike/
 
-2. Download in that bike folder the .zip data from https://stackoverflow.com/questions/20906474/import-multiple-csv-files-into-pandas-and-concatenate-into-one-dataframe
+2. Download in that bike folder the .zip data from https://s3.amazonaws.com/fordgobike-data/index.html
 
 3.  Set in DownloadAndCleanData.ipynb the var to tTrue
 
